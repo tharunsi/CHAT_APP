@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('/bg.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(22px);
+  padding: 40px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.login-button{
+    background-color: rgb(24, 24, 24);
+    color: #ccc;
+    padding: 6px;
+}
+
+.login-title {
+  text-align: center;
+  font-size: 28px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.chatapp-name {
+  color: #3b82f6;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #323232;
+  text-align: left;
+  font-weight: 450;
+  padding:2px;
+}
+
+.form-input {
+  height: 40px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: -1px solid #8f8b8b;
+  outline: none;
+  background-color: rgba(26, 23, 23, 0.8);
+  color:#ccc
+}
+.additional-button:hover{
+    color: #d70707; 
+}

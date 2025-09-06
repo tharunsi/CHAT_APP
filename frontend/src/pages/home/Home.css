@@ -1,0 +1,18 @@
+.home-dude-cont {
+  display: flex;
+  border-radius: 0.5rem; /* rounded-lg */
+  overflow: hidden;
+
+}
+
+@media (min-width: 640px) {
+  .home-dude-cont {
+    height: 450px;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-dude-cont {
+    height: 550px;
+  }
+}

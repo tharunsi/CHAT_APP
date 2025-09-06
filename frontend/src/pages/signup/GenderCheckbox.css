@@ -1,0 +1,30 @@
+.gender-checkbox-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.gender-option {
+  display: flex;
+  align-items: center;
+}
+
+.gender-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.gender-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.gender-input {
+  width: 18px;
+  height: 18px;
+  accent-color: #2563eb; /* nice blue color */
+  cursor: pointer;
+}

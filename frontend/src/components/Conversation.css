@@ -1,0 +1,75 @@
+/* container for each conversation row */
+.conversation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.conversation:hover {
+  background-color: #0ea5e9; /* sky-500 */
+}
+
+/* avatar container */
+.avatar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* online status dot */
+.avatar.online::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  background: #22c55e; /* green-500 */
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* avatar image styling */
+.avatar-image {
+  width: 48px; /* w-12 */
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* conversation text container */
+.conversation-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* header row (name + timestamp) */
+.conversation-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* name text */
+.conversation-name {
+  font-weight: bold;
+  color: #e5e7eb; /* text-gray-200 */
+}
+
+.conversation-time{
+   padding-top:15px;
+   font-size: 20px;
+}
+

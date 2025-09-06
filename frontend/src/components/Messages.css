@@ -1,0 +1,6 @@
+.oorumblood-msg-container{
+    padding-left: 1rem;
+  padding-right: 1rem;
+  flex: 1 1 0%;
+  overflow: auto;
+}

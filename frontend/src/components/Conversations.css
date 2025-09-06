@@ -1,0 +1,8 @@
+.container-box-convo {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  
+}
