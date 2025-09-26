@@ -1,13 +1,19 @@
 import "./Conversation.css";
+import useConversation from "../zustand/useConversation";
 
-const Conversation = () => {
+const Conversation = ({conversation,lastIdx,emoji}) => {
+
+  const {selectedConversation, setSelectedConversation} = useConversation()
+
+  const isSelected = selectedConversation?._id === conversation._id;
   return (
     <>
-      <div className="conversation">
+      <div className={`conversation ${isSelected ? "selected" : ""}`}
+      onClick={() => setSelectedConversation(conversation)} >
         <div className="avatar online">
           <div className="avatar-image">
             <img
-              src="https://cdn0.iconfinder.com/data/icons/communication-line-10/24/account_profile_user_contact_person_avatar_placeholder-512.png"
+              src={conversation.profilePic}
               alt="user avatar"
             />
           </div>
@@ -15,13 +21,13 @@ const Conversation = () => {
 
         <div className="conversation-content">
           <div className="conversation-header">
-            <p className="conversation-name">John Doe</p>
-            <span className="conversation-time">🎃</span>
+            <p className="conversation-name">{conversation.fullName}</p>
+            <span className="conversation-time">{emoji}</span>
           </div>
         </div>
       </div>
 
-      <div className="divider"></div>
+    {!lastIdx && <div className="divider"></div>}
     </>
   );
 };

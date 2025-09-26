@@ -13,6 +13,10 @@
   background-color: #0ea5e9; /* sky-500 */
 }
 
+.conversation.selected {
+  background-color: #0ea5e9; /* same as hover or any color you like */
+}
+
 /* avatar container */
 .avatar {
   position: relative;
