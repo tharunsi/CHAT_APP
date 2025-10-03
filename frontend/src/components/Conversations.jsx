@@ -1,4 +1,3 @@
-import React from 'react'
 import Conversation from './Conversation'
 import "./Conversations.css"
 import useGetConversations from '../hooks/useGetConversations';

@@ -4,6 +4,7 @@ import "./MessageContainer.css"
 import MessageInput from './MessageInput'
 import { TiMessages } from "react-icons/ti";
 import useConversation from '../zustand/useConversation';
+import { useAuthContext } from '../context/AuthContext';
 
 const MessageContainer = () => {
     const {selectedConversation, setSelectedConversation} = useConversation()
@@ -33,10 +34,12 @@ export default MessageContainer;
 
 
 const NoChatSelected = () => {
+
+  const {authUser} = useAuthContext()
   return (
     <div className="nochat-container">
       <div className="nochat-box">
-        <p>Welcome 👋 John Doe</p>
+        <p>Welcome 👋 {authUser.fullName}</p>
         <p>Select a chat to start messaging</p>
         <TiMessages className="nochat-icon" />
       </div>

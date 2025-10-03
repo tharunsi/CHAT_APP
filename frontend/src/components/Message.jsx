@@ -1,19 +1,31 @@
 import React from 'react'
 import "./Message.css";
+import useConversation from '../zustand/useConversation';
+import {useAuthContext} from '../context/AuthContext';
+import { extractTime } from '../utils/extractTime';
 
-const Message = () => {
+const Message = ({message}) => {
+  console.log("Message prop:", message);
+  const {authUser} = useAuthContext();
+    const {selectedConversation} = useConversation();
+    const fromMe = message?.senderId?.toString() === authUser?._id?.toString();
+    const formattedTime = extractTime(message.createdAt);
+    const chatClassName = fromMe ? 'message message-end' : 'message message-start';
+    const profilePic = fromMe ? authUser.profilePic: selectedConversation?.profilePic;
+    const shakeClass = message.shouldShake ? "shake" : ""
+
   return (
-    <div className="message message-end">
+    <div className={`message ${chatClassName}`}>
      
        
-      <div className="message-bubble">Hi! What is up?
-        <div className="message-footer">12:42</div>
+      <div className={`message-bubble ${shakeClass}`}>{message.message}
+      <div className="message-footer">{formattedTime}</div>
       </div>
        
       <div className="message-avatar">
         <img
           alt="User avatar"
-          src="https://cdn0.iconfinder.com/data/icons/communication-line-10/24/account_profile_user_contact_person_avatar_placeholder-512.png"
+          src={profilePic}
         />
       </div>
 

@@ -5,6 +5,7 @@
     background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(22px); 
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  overflow: auto;
 }
 .msg-container-box{
     background-color: #64748b; /* slate-500 #64748b*/

@@ -4,3 +4,7 @@
   flex: 1 1 0%;
   overflow: auto;
 }
+.send-msg-para{
+  text-align: center;
+  color:rgb(202, 206, 208)
+}

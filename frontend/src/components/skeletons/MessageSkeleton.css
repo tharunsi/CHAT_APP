@@ -1,0 +1,49 @@
+/* Common Skeleton effect */
+.skeleton {
+  background-color: #e5e7eb; /* same as Tailwind gray-200 */
+  border-radius: 4px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Pulse animation like Tailwind */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Layout */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Tailwind gap-3 */
+  margin-bottom: 12px;
+}
+
+.row.right {
+  justify-content: flex-end;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Tailwind gap-1 */
+}
+
+/* Circle Skeleton */
+.circle {
+  width: 40px;   /* Tailwind w-10 */
+  height: 40px;  /* Tailwind h-10 */
+  border-radius: 9999px; /* Tailwind rounded-full */
+  flex-shrink: 0;
+}
+
+/* Bar Skeleton */
+.bar {
+  width: 160px;  /* Tailwind w-40 */
+  height: 16px;  /* Tailwind h-4 */
+  border-radius: 4px;
+}

@@ -8,6 +8,9 @@
 .message-end {
   justify-content: flex-end;
 }
+.message-start {
+  justify-content: flex-start;
+}
 
 .message-avatar img {
   width: 40px;
@@ -30,4 +33,15 @@
   display: flex;
   justify-content: end;  
   
+}
+
+.message-start .message-bubble {
+  background-color: #646464; /* incoming msg color */
+  border-bottom-left-radius: 4px;
+}
+
+.message-end .message-bubble {
+  background-color: #4f46e5; /* outgoing msg (blue) */
+  color: white;
+  border-bottom-right-radius: 4px;
 }
