@@ -9,7 +9,9 @@ const useGetConversations = () => {
     const getConversations = async () => {
         setLoading(true);
         try{
-            const res = await fetch('https://chat-app-cbjo.onrender.com/api/users');
+            const res = await fetch('https://chat-app-cbjo.onrender.com/api/users', {
+                method: 'GET',
+                credentials: 'include',});
             const data = await res.json();
             if(data.error) {
                 throw new Error(data.error);
