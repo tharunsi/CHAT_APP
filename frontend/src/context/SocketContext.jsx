@@ -16,6 +16,7 @@ export const SocketContextProvider = ({ children }) => {
     useEffect(() => {
         if(authUser){
             const socket = io("https://chat-app-cbjo.onrender.com",{
+                withCredentials: true,
                 query:{
                     userId: authUser._id,
                 }
